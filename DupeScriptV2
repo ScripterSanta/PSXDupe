@@ -1,0 +1,104 @@
+-- Dupe Script
+-- Version: 2.0
+
+-- Instances:
+
+local Dupe = Instance.new("ScreenGui")
+local OpenClose = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Button = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+Dupe.Name = "Dupe"
+Dupe.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+OpenClose.Name = "Open/Close"
+OpenClose.Parent = Dupe
+OpenClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenClose.BorderSizePixel = 0
+OpenClose.Position = UDim2.new(0.00458727032, 0, 0.694266319, 0)
+OpenClose.Size = UDim2.new(0, 99, 0, 41)
+OpenClose.Style = Enum.ButtonStyle.RobloxButton
+OpenClose.Font = Enum.Font.SourceSansSemibold
+OpenClose.Text = "Close"
+OpenClose.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenClose.TextScaled = true
+OpenClose.TextSize = 20.000
+OpenClose.TextWrapped = true
+
+Frame.Parent = Dupe
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BackgroundTransparency = 0.500
+Frame.BorderColor3 = Color3.fromRGB(11, 74, 247)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.488505214, -100, 0.538340509, -100)
+Frame.Size = UDim2.new(0, 261, 0, 148)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 85, 255)
+Frame_2.Position = UDim2.new(0.261675835, 0, 0.50772202, 0)
+Frame_2.Size = UDim2.new(0, 123, 0, 49)
+Frame_2.Style = Enum.FrameStyle.RobloxRound
+
+Button.Name = "Button"
+Button.Parent = Frame
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BackgroundTransparency = 1.000
+Button.Position = UDim2.new(0.261675835, 0, 0.51074487, 0)
+Button.Size = UDim2.new(0, 123, 0, 50)
+Button.Font = Enum.Font.SourceSansBold
+Button.Text = "DUPE"
+Button.TextColor3 = Color3.fromRGB(64, 255, 102)
+Button.TextSize = 36.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0600733757, 0, -0.00439617783, 0)
+TextLabel.Size = UDim2.new(0, 229, 0, 61)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Dupe Hack V2"
+TextLabel.TextColor3 = Color3.fromRGB(0, 85, 255)
+TextLabel.TextSize = 40.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 170, 255)
+
+-- Scripts:
+
+local function DupeScript() -- Dupe.Script 
+	local script = Instance.new('Script', Dupe)
+
+	--Azarth Open/Close GUI TUT
+	
+	
+	local branch = script.Parent --Variable points to ScreenGui & everthing inside/below it.
+	local open = branch["Open/Close"] --Variable points to the open/close button.
+	local MainFrame = branch.Frame --Variable points to "Frame".
+	
+	open.MouseButton1Click:connect(function() --Anonymous function that is wired to the open/close button.
+		if MainFrame.Visible == false then --If Frame isn't Visible then 
+			MainFrame.Visible = true --frame becomes visible
+			open.Text = "Close" --text changes to close
+		elseif --elseif -->
+			MainFrame.Visible == true then --frame is visibe then 
+			MainFrame.Visible = false --frame.Visible = false
+			open.Text = "Open" --text changes to open
+		end
+	end)
+	
+			
+end
+coroutine.wrap(DupeScript)()
+local function DupeScript() -- Button.Script 
+	local script = Instance.new('Script', Button)
+
+	Button.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ScripterSanta/PSXDupe/main/DupeScript"))()
+	end)
+end
+coroutine.wrap(DupeScript)()
